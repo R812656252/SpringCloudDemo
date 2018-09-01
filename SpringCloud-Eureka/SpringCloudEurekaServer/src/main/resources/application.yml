@@ -1,0 +1,12 @@
+server:
+  port: 8083
+
+#eureka配置
+eureka:
+  instance:
+    hostname:localhost #eureka注册中心实例名称
+  client:
+    register-with-eureka:false
+    fetch-registry:false
+  service-url:
+    defaultZone:http://${eureka.instance.hostname}:${service.port}/eureka/
